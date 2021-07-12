@@ -15,13 +15,13 @@ impl DiffFunc for Cosine {
         (0.0, 1.0, 0.0)
     }
 
-    fn dv_dx(&self, _x: f64, cy: f64, _cv: f64) -> f64 {
+    fn dv_dx(&self, _x: f64, y: f64, _v: f64) -> f64 {
         let k = 1.0f64;
-        -k * cy
+        -k * y
     }
 
-    fn dy_dx(&self, _x: f64, _cy: f64, cv: f64) -> f64{
-        cv
+    fn dy_dx(&self, _x: f64, _y: f64, v: f64) -> f64{
+        v
     }
 }
 
